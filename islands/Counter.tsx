@@ -14,7 +14,7 @@ export default function Counter(props: CounterProps) {
   useEffect(() => {
     const { current: canvas } = reactCanvas;
     if (!canvas) return
-    console.log(BABYLON.default.Engine)
+    console.log(BABYLON)
     console.log(canvas)
     function createScene(canvas: HTMLElement | null, engine: BABYLON.default.Engine) {
       // const scene = new BABYLON.default.Scene(engine)
