@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
-import * as BABYLON from "babylonjs";
+import * as b from "babylonjs";
 
 interface CounterProps {
   start: number;
@@ -10,7 +10,7 @@ interface CounterProps {
 
 export default function Counter(props: CounterProps) {
   useEffect(() => {
-    console.log(BABYLON)
+    console.log(b)
     // function createScene(canvas: HTMLElement | null, engine: BABYLON.default.Engine) {
       // const scene = new BABYLON.default.Scene(engine)
       // BABYLON.default.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon")
