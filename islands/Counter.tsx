@@ -11,8 +11,7 @@ interface CounterProps {
 
 export default function Counter(props: CounterProps) {
   useEffect(() => {
-    const canvas = document.getElementById("renderCanvas")
-    console.log(canvas)
+    const canvas = window.document.getElementById("renderCanvas")
     const engine = new BABYLON.default.Engine(canvas, true)
     // const scene = createScene(canvas, engine)
     // engine.runRenderLoop(() => {
