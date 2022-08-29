@@ -11,16 +11,21 @@ interface CounterProps {
 
 export default function Counter(props: CounterProps) {
   useEffect(() => {
-    const canvas = window.document.getElementById("renderCanvas")
-    const engine = new BABYLON.default.Engine(canvas, true)
+    const canvas = document.getElementById("renderCanvas")
+    const p = document.getElementById("abc")!
+    p.innerHTML = "asdfasdf"
+    // const engine = new BABYLON.default.Engine(canvas, true)
     // const scene = createScene(canvas, engine)
     // engine.runRenderLoop(() => {
     //   scene.render()
     // })
 
-  }, [])
+  })
   return (
-    <canvas id ="renderCanvas"></canvas>
+    <div>
+      <canvas id ="renderCanvas"></canvas>
+      <p id="abc"></p>
+    </div>
   );
 }
 
