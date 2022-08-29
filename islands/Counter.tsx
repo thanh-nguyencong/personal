@@ -10,7 +10,11 @@ interface CounterProps {
 
 export default function Counter(props: CounterProps) {
   useEffect(() => {
-    console.log(b)
+    try {
+      console.log(b)
+    } catch (e) {
+      console.log(e)
+    }
     // function createScene(canvas: HTMLElement | null, engine: BABYLON.default.Engine) {
       // const scene = new BABYLON.default.Scene(engine)
       // BABYLON.default.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon")
