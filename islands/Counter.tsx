@@ -14,9 +14,9 @@ export default function Counter(props: CounterProps) {
     const canvas = document.getElementById("renderCanvas")!
     const engine = new BABYLON.default.Engine(canvas, true)
     const scene = createScene(canvas, engine)
-    engine.runRenderLoop(() => {
-      scene.render()
-    })
+    // engine.runRenderLoop(() => {
+    //   scene.render()
+    // })
 
   }, [])
   return (
