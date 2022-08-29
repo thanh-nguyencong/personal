@@ -2,27 +2,26 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
-import * as b from "babylonjs";
+import * as BABYLON from "https://unpkg.com/babylonjs";
 
 interface CounterProps {
   start: number;
 }
 
 export default function Counter(props: CounterProps) {
+  const reactCanvas = useRef(null);
   useEffect(() => {
-    try {
-      console.log(b)
-    } catch (e) {
-      console.log(e)
-    }
-    // function createScene(canvas: HTMLElement | null, engine: BABYLON.default.Engine) {
+    const { current: canvas } = reactCanvas;
+    if (!canvas) return
+    console.log(BABYLON)
+    function createScene(canvas: HTMLElement | null) {
       // const scene = new BABYLON.default.Scene(engine)
       // BABYLON.default.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon")
       // const camera = new BABYLON.default.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.default.Vector3(0, 0, 0))
       // camera.attachControl(canvas, true)
       // const light = new BABYLON.default.HemisphericLight("light", new BABYLON.default.Vector3(1, 1, 0))
       // return scene
-    // }
+    }
 
     // const engine = new BABYLON.default.Engine(canvas, true)
     // const scene = createScene(canvas, engine)
@@ -33,7 +32,7 @@ export default function Counter(props: CounterProps) {
   })
   return (
     <div>
-      <canvas></canvas>
+      <canvas ref={reactCanvas}></canvas>
     </div>
   );
 }
