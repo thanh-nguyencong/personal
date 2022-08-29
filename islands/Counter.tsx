@@ -14,7 +14,8 @@ export default function Counter(props: CounterProps) {
   useEffect(() => {
     const { current: canvas } = reactCanvas;
     if (!canvas) return
-    const engine = new BABYLON.default.Engine(canvas, true);
+    console.log(BABYLON.default.Engine)
+    console.log(canvas)
     function createScene(canvas: HTMLElement | null, engine: BABYLON.default.Engine) {
       // const scene = new BABYLON.default.Scene(engine)
       // BABYLON.default.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon")
