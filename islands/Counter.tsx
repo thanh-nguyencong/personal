@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
-import * as BABYLON from "https://esm.sh/babylonjs@5.21.0";
+import * as BABYLON from "babylonjs";
 
 interface CounterProps {
   start: number;
