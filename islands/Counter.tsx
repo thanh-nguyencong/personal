@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
 
 import * as BABYLON from "https://esm.sh/babylonjs@5.21.0";
@@ -10,7 +10,11 @@ interface CounterProps {
 }
 
 export default function Counter(props: CounterProps) {
+  const reactCanvas = useRef(null);
   useEffect(() => {
+    const { current: canvas } = reactCanvas;
+    if (!canvas) return
+    const engine = new BABYLON.default.Engine(canvas, true);
     function createScene(canvas: HTMLElement | null, engine: BABYLON.default.Engine) {
       // const scene = new BABYLON.default.Scene(engine)
       // BABYLON.default.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon")
@@ -20,7 +24,6 @@ export default function Counter(props: CounterProps) {
       // return scene
     }
 
-    const canvas = document.getElementById("renderCanvas")
     // const engine = new BABYLON.default.Engine(canvas, true)
     // const scene = createScene(canvas, engine)
     // engine.runRenderLoop(() => {
@@ -30,7 +33,7 @@ export default function Counter(props: CounterProps) {
   })
   return (
     <div>
-      <canvas id ="renderCanvas"></canvas>
+      <canvas ref={reactCanvas}></canvas>
     </div>
   );
 }
