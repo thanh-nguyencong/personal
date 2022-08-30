@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
-import * as BABYLON from "../babylon.js";
+import * as BABYLON from "../babylon.ts";
 
 export default function Counter() {
   const renderCanvas = useRef(null);
