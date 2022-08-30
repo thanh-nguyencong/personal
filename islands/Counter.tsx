@@ -2,18 +2,14 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
-import * as BABYLON from "https://unpkg.com/babylonjs";
-import moment from 'https://cdn.pika.dev/moment@^2.26.0';
-interface CounterProps {
-  start: number;
-}
+import * as BABYLON from 'https://cdn.skypack.dev/babylonjs';
 
-export default function Counter(props: CounterProps) {
+export default function Counter() {
   const reactCanvas = useRef(null);
   useEffect(() => {
     const { current: canvas } = reactCanvas;
     if (!canvas) return
-    console.log(moment.now())
+    console.log(BABYLON)
     function createScene(canvas: HTMLElement | null) {
       // const scene = new BABYLON.default.Scene(engine)
       // BABYLON.default.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon")
