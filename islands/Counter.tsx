@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
-import * as BABYLON from 'https://esm.sh/babylonjs@5.21.0';
+import * as b from 'https://esm.sh/babylonjs@5.21.0';
 
 
 export default function Counter() {
@@ -11,6 +11,7 @@ export default function Counter() {
     const { current: canvas } = reactCanvas;
     if (!canvas) return
     console.log(navigator.hardwareConcurrency)
+    console.log(b)
     function createScene(canvas: HTMLElement | null) {
       // const scene = new BABYLON.default.Scene(engine)
       // BABYLON.default.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon")
