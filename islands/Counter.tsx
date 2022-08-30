@@ -4,12 +4,14 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
 import * as BABYLON from 'https://esm.sh/babylonjs@5.21.0';
 
+const babylon = Object.create(BABYLON)
+
 export default function Counter() {
   const reactCanvas = useRef(null);
   useEffect(() => {
     const { current: canvas } = reactCanvas;
     if (!canvas) return
-    console.log(BABYLON)
+    console.log(babylon)
     function createScene(canvas: HTMLElement | null) {
       // const scene = new BABYLON.default.Scene(engine)
       // BABYLON.default.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "box.babylon")
