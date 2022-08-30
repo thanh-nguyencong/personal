@@ -6,7 +6,6 @@
     "preact-render-to-string": "https://esm.sh/preact-render-to-string@5.2.1?external=preact",
     "@twind": "./utils/twind.ts",
     "twind": "https://esm.sh/twind@0.16.17",
-    "twind/": "https://esm.sh/twind@0.16.17/",
-    "babylonjs": "https://unpkg.com/babylonjs@5.21.0/babylon.js"
+    "twind/": "https://esm.sh/twind@0.16.17/"
   }
 }
