@@ -3,7 +3,7 @@ import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
 import * as babylonjs from "babylonjs";
-console.log(babylonjs)
+try{console.log(babylonjs)}catch(e){console.log("something is wrong i can feel it")}
 
 export default function Counter() {
   // const reactCanvas = useRef(null);
