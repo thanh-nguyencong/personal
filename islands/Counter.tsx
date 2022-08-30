@@ -2,8 +2,8 @@
 import { h } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "@twind";
-import * as BABYLON from 'https://esm.sh/babylonjs@5.21.0';
-console.log(BABYLON)
+import * as babylonjs from "babylonjs";
+console.log(babylonjs)
 
 export default function Counter() {
   // const reactCanvas = useRef(null);
@@ -28,7 +28,7 @@ export default function Counter() {
   // })
   return (
     <div>
-      <canvas ref={reactCanvas}></canvas>
+      <canvas></canvas>
     </div>
   );
 }
