@@ -7,6 +7,6 @@
     "@twind": "./utils/twind.ts",
     "twind": "https://esm.sh/twind@0.16.17",
     "twind/": "https://esm.sh/twind@0.16.17/",
-    "babylonjs": "https://ga.jspm.io/npm:babylonjs@5.21.0/babylon.js"
+    "babylonjs": "https://unpkg.com/babylonjs@5.21.0/babylon.js"
   }
 }
